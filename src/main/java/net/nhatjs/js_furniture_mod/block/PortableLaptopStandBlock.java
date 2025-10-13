@@ -55,15 +55,13 @@ public class PortableLaptopStandBlock extends Block {
                                  Player player, InteractionHand hand, BlockHitResult hit) {
         if (level.isClientSide()) return InteractionResult.SUCCESS;
         ItemStack held = player.getMainHandItem();
-        Entity entity = null;
-
         if (held.is(ModBlocks.LAPTOP.get().asItem())) {
             Direction facing =  state.getValue(HorizontalDirectionalBlock.FACING);
             level.setBlock(pos, ModBlocks.LAPTOP_CLOSED_PORTABLE_LAPTOP_STAND.get().defaultBlockState()
                     .setValue(HorizontalDirectionalBlock.FACING, facing), Block.UPDATE_ALL);
 
-            if (entity instanceof Player _player) {
-                ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
+            if ((Entity)player instanceof Player _player) {
+                ItemStack _stktoremove = ((Entity)player instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
                 _player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
             }
 
