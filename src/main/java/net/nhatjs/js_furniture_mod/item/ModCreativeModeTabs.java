@@ -1,0 +1,84 @@
+package net.nhatjs.js_furniture_mod.item;
+
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
+import net.nhatjs.js_furniture_mod.NhatJSFurnitureMod;
+import net.nhatjs.js_furniture_mod.block.ModBlocks;
+
+public class ModCreativeModeTabs {
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, NhatJSFurnitureMod.MOD_ID);
+
+    public static final RegistryObject<CreativeModeTab> JS_FURNITURE_MOD_TABS = CREATIVE_MODE_TAB.register("js_furniture_logo",
+            () -> CreativeModeTab.builder().title(Component.translatable("itemgroup.js_furniture_mod.js_furniture_tab"))
+                            .icon(() -> new ItemStack(ModBlocks.BLACK_TABLE.get()))
+                                    .displayItems((parameters, output) -> {
+                                        output.accept(ModBlocks.WOOD_CHAIR.get());
+                                        output.accept(ModBlocks.MODERN_CHAIR.get());
+                                        output.accept(ModBlocks.SOFA.get());
+                                        output.accept(ModBlocks.WOOD_LIGHT_TABLE.get());
+                                        output.accept(ModBlocks.BLACK_TABLE.get());
+                                        output.accept(ModBlocks.WHITE_TABLE.get());
+                                        output.accept(ModBlocks.WOOD_COFFEE_TABLE.get());
+                                        output.accept(ModBlocks.WHITE_COFFEE_TABLE.get());
+                                        output.accept(ModBlocks.WOOD_DESK.get());
+                                        output.accept(ModBlocks.WHITE_DESK.get());
+                                        output.accept(ModBlocks.WOOD_STANDING_DESK.get());
+                                        output.accept(ModBlocks.WOOD_STANDING_DESK_B.get());
+                                        output.accept(ModBlocks.BLACK_STANDING_DESK.get());
+                                        output.accept(ModBlocks.BLACK_STANDING_DESK_B.get());
+                                        output.accept(ModBlocks.WHITE_STANDING_DESK.get());
+                                        output.accept(ModBlocks.WHITE_STANDING_DESK_B.get());
+                                        output.accept(ModBlocks.WOOD_3_DRAWER_DRESSER.get());
+                                        output.accept(ModBlocks.WHITE_3_DRAWER_DRESSER.get());
+                                        output.accept(ModBlocks.WOOD_LIGHT_TV_STAND.get());
+                                        output.accept(ModBlocks.KITCHEN_CABINET_BOTTOM.get());
+                                        output.accept(ModBlocks.KITCHEN_CABINET_BOTTOM_WITH_SINK.get());
+                                        output.accept(ModBlocks.KITCHEN_CABINET_BOTTOM_2.get());
+                                        output.accept(ModBlocks.KITCHEN_CABINET_BOTTOM_2_EXTRA.get());
+                                        output.accept(ModBlocks.KITCHEN_CABINET_BOTTOM_B.get());
+                                        output.accept(ModBlocks.KITCHEN_CABINET_BOTTOM_B_WITH_SINK.get());
+                                        output.accept(ModBlocks.KITCHEN_CABINET_BOTTOM_B_2.get());
+                                        output.accept(ModBlocks.KITCHEN_DRAWERS.get());
+                                        output.accept(ModBlocks.KITCHEN_CABINET_TOP.get());
+                                        output.accept(ModBlocks.KITCHEN_CABINET_TOP_B.get());
+                                        output.accept(ModBlocks.WOOD_STRIPED_WALL.get());
+                                        output.accept(ModBlocks.BLACK_MIRROR.get());
+                                        output.accept(ModBlocks.SOCKET.get());
+                                        output.accept(ModBlocks.MODERN_CLOCK.get());
+                                        output.accept(ModBlocks.MODERN_LIGHT.get());
+                                        output.accept(ModBlocks.LED_FLOOR_LAMP.get());
+                                        output.accept(ModBlocks.LED_FLOOR_LAMP_RGB_OFF.get());
+                                        output.accept(ModBlocks.STUDIO_LIGHT.get());
+                                        output.accept(ModBlocks.MONITOR_SETUP.get());
+                                        output.accept(ModBlocks.MONITOR.get());
+                                        output.accept(ModBlocks.KEYBOARD.get());
+                                        output.accept(ModBlocks.COMPUTER_MOUSE.get());
+                                        output.accept(ModBlocks.PC.get());
+                                        output.accept(ModBlocks.PC_TOWER_GLASS.get());
+                                        output.accept(ModBlocks.LAPTOP.get());
+                                        output.accept(ModBlocks.PORTABLE_LAPTOP_STAND.get());
+                                        output.accept(ModBlocks.LAPTOP_CLOSED_PORTABLE_LAPTOP_STAND.get());
+                                        output.accept(ModBlocks.MIDI_STANDALONE_GROOVEBOX.get());
+                                        output.accept(ModBlocks.MIDI_STANDALONE_GROOVEBOX_2.get());
+                                        output.accept(ModBlocks.MIDI_STANDALONE_GROOVEBOX_3.get());
+                                        output.accept(ModBlocks.COOKTOP.get());
+                                        output.accept(ModBlocks.FRIDGE_A.get());
+                                        output.accept(ModBlocks.FRIDGE_B.get());
+                                        output.accept(ModBlocks.MODERN_BATHROOM_SINK_STORAGE.get());
+                                        output.accept(ModBlocks.MODERN_BATHROOM_MIRROR_SHELF.get());
+                                        output.accept(ModBlocks.SHOWER.get());
+                                        output.accept(ModBlocks.WASHING_MACHINE_AI.get());
+                                        output.accept(ModBlocks.PLANT_POT.get());
+                                        output.accept(ModItems.REMOTE_CONTROL_RGB.get());
+                                    }).build());
+
+    public static void register(IEventBus eventBus) {
+        CREATIVE_MODE_TAB.register(eventBus);
+    }
+}
