@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "121",
+    "131"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:black_concrete"
+    },
+    "2": {
+      "item": "minecraft:end_crystal"
+    },
+    "3": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "result": {
+    "item": "js_furniture_mod:tv",
+    "count": 1
+  },
+  "show_notification": true
+}

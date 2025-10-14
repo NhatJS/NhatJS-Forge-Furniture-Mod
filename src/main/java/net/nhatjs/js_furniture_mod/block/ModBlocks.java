@@ -21,6 +21,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> WOOD_CHAIR = registerBlock("wood_chair",
             () -> new ChairBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
+    public static final RegistryObject<Block> WHITE_CHAIR = registerBlock("white_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
     public static final RegistryObject<Block> MODERN_CHAIR = registerBlock("modern_chair",
             () -> new ChairBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
     public static final RegistryObject<Block> SOFA = registerBlock("sofa",
@@ -57,6 +59,8 @@ public class ModBlocks {
             () -> new ThreeDrawerDresserBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
     public static final RegistryObject<Block> WOOD_LIGHT_TV_STAND = registerBlock("wood_light_tv_stand",
             () -> new TVStandBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
+    public static final RegistryObject<Block> WHITE_TV_STAND = registerBlock("white_tv_stand",
+            () -> new TVStand2Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
     public static final RegistryObject<Block> KITCHEN_CABINET_BOTTOM = registerBlock("kitchen_cabinet_bottom",
             () -> new KitchenBottomBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
     public static final RegistryObject<Block> KITCHEN_CABINET_BOTTOM_WITH_SINK = registerBlock("kitchen_cabinet_bottom_with_sink",
@@ -73,6 +77,8 @@ public class ModBlocks {
             () -> new KitchenBottomBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
     public static final RegistryObject<Block> KITCHEN_DRAWERS = registerBlock("kitchen_drawers",
             () -> new KitchenBottomBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
+    public static final RegistryObject<Block> KITCHEN_DRAWERS_B = registerBlock("kitchen_drawers_b",
+            () -> new KitchenBottomBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
     public static final RegistryObject<Block> KITCHEN_CABINET_TOP = registerBlock("kitchen_cabinet_top",
             () -> new KitchenTopBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
     public static final RegistryObject<Block> KITCHEN_CABINET_TOP_B = registerBlock("kitchen_cabinet_top_b",
@@ -81,8 +87,14 @@ public class ModBlocks {
             () -> new WoodStripedWallBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(0.3f).noOcclusion()));
     public static final RegistryObject<Block> BLACK_MIRROR = registerBlock("black_mirror",
             () -> new BlackMirrorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(0.3f).noOcclusion()));
+    public static final RegistryObject<Block> VERTICAL_BLINDS = registerBlock("vertical_blinds",
+            () -> new VerticalBlindsBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(0.7f).noOcclusion()));
     public static final RegistryObject<Block> SOCKET = registerBlock("socket",
             () -> new SocketBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(0.2f).noOcclusion()));
+    public static final RegistryObject<Block> TV = registerBlock("tv",
+            () -> new TVBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
+    public static final RegistryObject<Block> FLOOR_STANDING_SPEAKER = registerBlock("floor_standing_speaker",
+            () -> new FloorStandingSpeakerBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(0.9f).noOcclusion()));
     public static final RegistryObject<Block> MODERN_CLOCK = registerBlock("modern_clock",
             () -> new ModernClockBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(0.4f).noOcclusion()));
     public static final RegistryObject<Block> MODERN_LIGHT = registerBlock("modern_light",
@@ -95,6 +107,8 @@ public class ModBlocks {
             () -> new LEDFloorLampRGBAltBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
     public static final RegistryObject<Block> STUDIO_LIGHT = registerBlock("studio_light",
             () -> new StudioLightBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.5f).noOcclusion()));
+    public static final RegistryObject<Block> LED_RGB_TRIANGLE_PANEL = registerBlock("led_rgb_triangle_panel",
+            () -> new LEDRGBTrianglePanelBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(0.8f).noOcclusion()));
     public static final RegistryObject<Block> MONITOR_SETUP = registerBlock("monitor_setup",
             () -> new MonitorSetupBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
     public static final RegistryObject<Block> MONITOR = registerBlock("monitor",
@@ -137,6 +151,8 @@ public class ModBlocks {
             () -> new WashingMachineBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
     public static final RegistryObject<Block> PLANT_POT = registerBlock("plant_pot",
             () -> new PotBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(0.4f).noOcclusion()));
+    public static final RegistryObject<Block> BOOKS = registerBlock("books",
+            () -> new BooksBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(0.1f).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

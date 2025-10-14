@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
                             .icon(() -> new ItemStack(ModBlocks.BLACK_TABLE.get()))
                                     .displayItems((parameters, output) -> {
                                         output.accept(ModBlocks.WOOD_CHAIR.get());
+                                        output.accept(ModBlocks.WHITE_CHAIR.get());
                                         output.accept(ModBlocks.MODERN_CHAIR.get());
                                         output.accept(ModBlocks.SOFA.get());
                                         output.accept(ModBlocks.WOOD_LIGHT_TABLE.get());
@@ -37,6 +38,7 @@ public class ModCreativeModeTabs {
                                         output.accept(ModBlocks.WOOD_3_DRAWER_DRESSER.get());
                                         output.accept(ModBlocks.WHITE_3_DRAWER_DRESSER.get());
                                         output.accept(ModBlocks.WOOD_LIGHT_TV_STAND.get());
+                                        output.accept(ModBlocks.WHITE_TV_STAND.get());
                                         output.accept(ModBlocks.KITCHEN_CABINET_BOTTOM.get());
                                         output.accept(ModBlocks.KITCHEN_CABINET_BOTTOM_WITH_SINK.get());
                                         output.accept(ModBlocks.KITCHEN_CABINET_BOTTOM_2.get());
@@ -45,15 +47,20 @@ public class ModCreativeModeTabs {
                                         output.accept(ModBlocks.KITCHEN_CABINET_BOTTOM_B_WITH_SINK.get());
                                         output.accept(ModBlocks.KITCHEN_CABINET_BOTTOM_B_2.get());
                                         output.accept(ModBlocks.KITCHEN_DRAWERS.get());
+                                        output.accept(ModBlocks.KITCHEN_DRAWERS_B.get());
                                         output.accept(ModBlocks.KITCHEN_CABINET_TOP.get());
                                         output.accept(ModBlocks.KITCHEN_CABINET_TOP_B.get());
                                         output.accept(ModBlocks.WOOD_STRIPED_WALL.get());
                                         output.accept(ModBlocks.BLACK_MIRROR.get());
+                                        output.accept(ModBlocks.VERTICAL_BLINDS.get());
                                         output.accept(ModBlocks.SOCKET.get());
+                                        output.accept(ModBlocks.TV.get());
+                                        output.accept(ModBlocks.FLOOR_STANDING_SPEAKER.get());
                                         output.accept(ModBlocks.MODERN_CLOCK.get());
                                         output.accept(ModBlocks.MODERN_LIGHT.get());
                                         output.accept(ModBlocks.LED_FLOOR_LAMP.get());
                                         output.accept(ModBlocks.LED_FLOOR_LAMP_RGB_OFF.get());
+                                        output.accept(ModBlocks.LED_RGB_TRIANGLE_PANEL.get());
                                         output.accept(ModBlocks.STUDIO_LIGHT.get());
                                         output.accept(ModBlocks.MONITOR_SETUP.get());
                                         output.accept(ModBlocks.MONITOR.get());
@@ -75,6 +82,7 @@ public class ModCreativeModeTabs {
                                         output.accept(ModBlocks.SHOWER.get());
                                         output.accept(ModBlocks.WASHING_MACHINE_AI.get());
                                         output.accept(ModBlocks.PLANT_POT.get());
+                                        output.accept(ModBlocks.BOOKS.get());
                                         output.accept(ModItems.REMOTE_CONTROL_RGB.get());
                                     }).build());
 
