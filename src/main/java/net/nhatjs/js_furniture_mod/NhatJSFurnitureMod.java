@@ -2,7 +2,10 @@ package net.nhatjs.js_furniture_mod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.ModelEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -14,6 +17,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.nhatjs.js_furniture_mod.block.ModBlocks;
+import net.nhatjs.js_furniture_mod.block.blockentity.ModBlockEntities;
 import net.nhatjs.js_furniture_mod.entity.ModEntities;
 import net.nhatjs.js_furniture_mod.entity.client.renderer.ChairRenderer;
 import net.nhatjs.js_furniture_mod.item.ModCreativeModeTabs;
@@ -40,6 +44,7 @@ public class NhatJSFurnitureMod
         ModItems.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModBlockEntities.registerModBlockEntities(modEventBus);
         NhatJSFurnitureModClient.init(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
@@ -47,6 +52,9 @@ public class NhatJSFurnitureMod
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+        modEventBus.addListener((ModelEvent.RegisterAdditional e) -> {
+            e.register(ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/ceiling_fan_blades"));
+        });
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

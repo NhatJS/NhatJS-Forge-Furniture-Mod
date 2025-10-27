@@ -154,6 +154,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> BOOKS = registerBlock("books",
             () -> new BooksBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(0.1f).noOcclusion()));
 
+    //1.0.2 update
+    public static final RegistryObject<Block> CEILING_FAN = registerBlock("ceiling_fan",
+            () -> new CeilingFanBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
+    public static final RegistryObject<Block> BLACK_GAMING_CHAIR = registerBlock("black_gaming_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
+    public static final RegistryObject<Block> WHITE_GAMING_CHAIR = registerBlock("white_gaming_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
+    //end
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

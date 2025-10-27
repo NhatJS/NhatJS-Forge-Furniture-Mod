@@ -2,10 +2,14 @@ package net.nhatjs.js_furniture_mod;
 
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.nhatjs.js_furniture_mod.block.ModBlocks;
+import net.nhatjs.js_furniture_mod.block.blockentity.ModBlockEntities;
+import net.nhatjs.js_furniture_mod.block.blockentity.client.renderer.CeilingFanRenderer;
+import net.nhatjs.js_furniture_mod.block.blockentity.client.renderer.CoffeeTableRenderer;
 
 public class NhatJSFurnitureModClient {
     public static void init(IEventBus eventBus) {
@@ -84,6 +88,14 @@ public class NhatJSFurnitureModClient {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.BOOKS.get(), RenderType.cutoutMipped());
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.PC_TOWER_GLASS.get(), RenderType.translucent());
+
+            //1.0.2 update
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CEILING_FAN.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLACK_GAMING_CHAIR.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.WHITE_GAMING_CHAIR.get(), RenderType.cutoutMipped());
+            BlockEntityRenderers.register(ModBlockEntities.CEILING_FAN.get(), CeilingFanRenderer::new);
+            BlockEntityRenderers.register(ModBlockEntities.COFFEE_TABLE.get(), CoffeeTableRenderer::new);
+            //end
         });
     }
 }
