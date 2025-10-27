@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.nhatjs.js_furniture_mod.block.blockentity.client.CeilingFanBlockEntity;
@@ -19,7 +20,7 @@ public class CeilingFanRenderer implements BlockEntityRenderer<CeilingFanBlockEn
     private final BakedModel blades;
 
     public CeilingFanRenderer(BlockEntityRendererProvider.Context ctx) {
-        blades = Minecraft.getInstance().getModelManager().getModel(ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/ceiling_fan_blades"));
+        blades = Minecraft.getInstance().getModelManager().getModel(ModelResourceLocation.inventory(ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/ceiling_fan_blades")));
     }
 
     @Override

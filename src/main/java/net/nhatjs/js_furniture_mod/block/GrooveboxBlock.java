@@ -47,7 +47,7 @@ public class GrooveboxBlock extends Block {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         if (!level.isClientSide()) {
             boolean current = state.getValue(TURN_ON);
             level.setBlock(pos, state.setValue(TURN_ON, !current), 3);

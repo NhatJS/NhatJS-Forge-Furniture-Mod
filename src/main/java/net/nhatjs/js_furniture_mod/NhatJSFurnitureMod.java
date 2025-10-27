@@ -53,7 +53,7 @@ public class NhatJSFurnitureMod
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         modEventBus.addListener((ModelEvent.RegisterAdditional e) -> {
-            e.register(ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/ceiling_fan_blades"));
+            e.register(ModelResourceLocation.inventory(ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/ceiling_fan_blades")));
         });
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us

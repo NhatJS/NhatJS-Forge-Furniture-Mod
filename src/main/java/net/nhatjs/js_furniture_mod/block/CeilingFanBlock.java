@@ -46,7 +46,7 @@ public class CeilingFanBlock extends Block implements EntityBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         if (!level.isClientSide()) {
             level.setBlock(pos, state.cycle(TURN_ON), Block.UPDATE_ALL);
         }

@@ -51,8 +51,8 @@ public class PortableLaptopStandBlock extends Block {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos,
-                                 Player player, InteractionHand hand, BlockHitResult hit) {
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
+                                 Player player, BlockHitResult hit) {
         if (level.isClientSide()) return InteractionResult.SUCCESS;
         ItemStack held = player.getMainHandItem();
         if (held.is(ModBlocks.LAPTOP.get().asItem())) {

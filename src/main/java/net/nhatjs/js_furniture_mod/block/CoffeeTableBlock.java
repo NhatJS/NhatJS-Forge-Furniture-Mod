@@ -87,8 +87,8 @@ public class CoffeeTableBlock extends Block implements EntityBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos,
-                                 Player player, InteractionHand hand, BlockHitResult hit) {
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
+                                 Player player, BlockHitResult hit) {
         if (level.isClientSide()) return InteractionResult.SUCCESS;
 
         CoffeeTableBlockEntity be = (CoffeeTableBlockEntity) level.getBlockEntity(pos);
@@ -121,7 +121,7 @@ public class CoffeeTableBlock extends Block implements EntityBlock {
     }
 
     @Override
-    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+    public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
         if (!level.isClientSide()) {
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof CoffeeTableBlockEntity table) {
@@ -133,5 +133,6 @@ public class CoffeeTableBlock extends Block implements EntityBlock {
             }
         }
         super.playerWillDestroy(level, pos, state, player);
+        return state;
     }
 }

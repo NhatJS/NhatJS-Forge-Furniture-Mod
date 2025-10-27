@@ -33,27 +33,20 @@ public class CoffeeTableBlockEntity extends BlockEntity {
             ((ServerLevel)level).getChunkSource().blockChanged(getBlockPos());
         }
     }
-    @Override protected void saveAdditional(CompoundTag nbt) {
-        super.saveAdditional(nbt);
-        if (!stack.isEmpty()) {
-            CompoundTag itemTag = new CompoundTag();
-            stack.save(itemTag);
-            nbt.put("it", itemTag);
-        }
+
+    @Override protected void saveAdditional(CompoundTag nbt, HolderLookup.Provider register) {
+        super.saveAdditional(nbt, register);
+        if (!stack.isEmpty()) nbt.put("it", stack.save(level.registryAccess()));
         nbt.putInt("rn", renderNonce);
     }
-
-    @Override public void load(CompoundTag nbt) {
-        super.load(nbt);
-        if (nbt.contains("it",Tag.TAG_COMPOUND)) {
-            this.stack = ItemStack.of(nbt.getCompound("it"));
-        }
-        else {
-            this.stack = ItemStack.EMPTY;
-        }
-        this.renderNonce = nbt.getInt("rn");
+    @Override protected void loadAdditional(CompoundTag nbt, HolderLookup.Provider register) {
+        super.loadAdditional(nbt, register);
+        stack = nbt.contains("it")
+                ? ItemStack.parse(level.registryAccess(), nbt.getCompound("it")).orElse(ItemStack.EMPTY)
+                : ItemStack.EMPTY;
+        renderNonce = nbt.getInt("rn");
     }
 
     @Override public Packet<ClientGamePacketListener> getUpdatePacket() { return ClientboundBlockEntityDataPacket.create(this); }
-    @Override public CompoundTag getUpdateTag() { return saveWithoutMetadata(); }
+    @Override public CompoundTag getUpdateTag(HolderLookup.Provider register) { return saveWithoutMetadata(level.registryAccess()); }
 }

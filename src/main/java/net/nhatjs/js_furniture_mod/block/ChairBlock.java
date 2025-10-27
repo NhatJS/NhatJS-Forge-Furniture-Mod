@@ -52,7 +52,7 @@ public class ChairBlock extends Block {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         if (!level.isClientSide()) {
             Entity entity = null;
             List<ChairBlockEntity> entities = level.getEntities(ModEntities.CHAIR.get(), new AABB(pos), chairBlockEntity -> true);
