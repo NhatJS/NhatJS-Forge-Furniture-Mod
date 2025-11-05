@@ -163,6 +163,10 @@ public class ModBlocks {
             () -> new ChairBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
     //end
 
+    //1.0.3 update
+    public static final RegistryObject<Block> TOILET = registerBlock("toilet",
+            () -> new ToiletBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
+    //end
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
