@@ -96,6 +96,10 @@ public class NhatJSFurnitureModClient {
             BlockEntityRenderers.register(ModBlockEntities.CEILING_FAN.get(), CeilingFanRenderer::new);
             BlockEntityRenderers.register(ModBlockEntities.COFFEE_TABLE.get(), CoffeeTableRenderer::new);
             //end
+
+            //1.0.3 update
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TOILET.get(), RenderType.cutoutMipped());
+            //end
         });
     }
 }

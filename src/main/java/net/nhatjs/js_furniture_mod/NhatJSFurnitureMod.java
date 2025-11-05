@@ -19,7 +19,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.nhatjs.js_furniture_mod.block.ModBlocks;
 import net.nhatjs.js_furniture_mod.block.blockentity.ModBlockEntities;
 import net.nhatjs.js_furniture_mod.entity.ModEntities;
-import net.nhatjs.js_furniture_mod.entity.client.renderer.ChairRenderer;
+import net.nhatjs.js_furniture_mod.entity.client.renderer.SeatRenderer;
 import net.nhatjs.js_furniture_mod.item.ModCreativeModeTabs;
 import net.nhatjs.js_furniture_mod.item.ModItems;
 import org.slf4j.Logger;
@@ -82,8 +82,8 @@ public class NhatJSFurnitureMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            EntityRenderers.register(ModEntities.CHAIR.get(), ChairRenderer::new);
-            EntityRenderers.register(ModEntities.SOFA.get(), ChairRenderer::new);
+            EntityRenderers.register(ModEntities.CHAIR.get(), SeatRenderer::new);
+            EntityRenderers.register(ModEntities.SOFA.get(), SeatRenderer::new);
         }
     }
 }
