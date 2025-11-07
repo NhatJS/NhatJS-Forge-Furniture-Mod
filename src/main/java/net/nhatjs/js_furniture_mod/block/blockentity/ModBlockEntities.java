@@ -16,10 +16,15 @@ public final class ModBlockEntities {
 
 //1.0.2 update
     public static final RegistryObject<BlockEntityType<CeilingFanBlockEntity>> CEILING_FAN = BLOCK_ENTITIES.register("ceiling_fan", () ->
-        BlockEntityType.Builder.of(CeilingFanBlockEntity::new, ModBlocks.CEILING_FAN.get()).build(null));
+        BlockEntityType.Builder.of(CeilingFanBlockEntity::new,
+                ModBlocks.CEILING_FAN.get(),
+                ModBlocks.CEILING_FAN_B.get()).build(null));
 
     public static final RegistryObject<BlockEntityType<CoffeeTableBlockEntity>> COFFEE_TABLE = BLOCK_ENTITIES.register("coffee_table", () ->
-            BlockEntityType.Builder.of(CoffeeTableBlockEntity::new, ModBlocks.WOOD_COFFEE_TABLE.get(), ModBlocks.WHITE_COFFEE_TABLE.get()).build(null));
+            BlockEntityType.Builder.of(CoffeeTableBlockEntity::new,
+                    ModBlocks.WOOD_COFFEE_TABLE.get(),
+                    ModBlocks.WHITE_COFFEE_TABLE.get(),
+                    ModBlocks.WOOD_MEDIUM_COFFEE_TABLE.get()).build(null));
 //end
 
     public static void registerModBlockEntities(IEventBus eventBus) {
