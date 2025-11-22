@@ -105,7 +105,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> LED_FLOOR_LAMP_RGB_OFF = registerBlock("led_floor_lamp_rgb_off",
             () -> new LEDFloorLampRGBBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
     public static final RegistryObject<Block> LED_FLOOR_LAMP_RGB_OFF_2 = registerBlock("led_floor_lamp_rgb_off_2",
-            () -> new LEDFloorLampRGBAltBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion()));
+            () -> new LEDFloorLampRGBAltBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.0f).noOcclusion().noLootTable()));
     public static final RegistryObject<Block> STUDIO_LIGHT = registerBlock("studio_light",
             () -> new StudioLightBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(1.5f).noOcclusion()));
     public static final RegistryObject<Block> LED_RGB_TRIANGLE_PANEL = registerBlock("led_rgb_triangle_panel",
