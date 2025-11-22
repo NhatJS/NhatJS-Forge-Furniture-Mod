@@ -206,3 +206,11 @@ publishing {
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
+tasks.withType(JavaExec).configureEach {
+    // loại bỏ bất kỳ jvmArg chứa securejarhandler hoặc --add-opens/exports
+    jvmArgs = jvmArgs.findAll { arg ->
+        !(arg.toString().contains('cpw.mods.securejarhandler') ||
+                arg.toString().contains('--add-opens') ||
+                arg.toString().contains('--add-exports'))
+    }
+}
