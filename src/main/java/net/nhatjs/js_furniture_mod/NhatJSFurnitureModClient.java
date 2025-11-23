@@ -7,9 +7,9 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.nhatjs.js_furniture_mod.block.ModBlocks;
-import net.nhatjs.js_furniture_mod.block.blockentity.ModBlockEntities;
-import net.nhatjs.js_furniture_mod.block.blockentity.client.renderer.CeilingFanRenderer;
-import net.nhatjs.js_furniture_mod.block.blockentity.client.renderer.CoffeeTableRenderer;
+import net.nhatjs.js_furniture_mod.blockentity.ModBlockEntities;
+import net.nhatjs.js_furniture_mod.blockentity.renderer.CeilingFanRenderer;
+import net.nhatjs.js_furniture_mod.blockentity.renderer.CoffeeTableRenderer;
 
 public class NhatJSFurnitureModClient {
     public static void init(IEventBus eventBus) {

@@ -4,7 +4,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -24,7 +23,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.nhatjs.js_furniture_mod.block.blockentity.client.CoffeeTableBlockEntity;
+import net.nhatjs.js_furniture_mod.blockentity.client.CoffeeTableBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
 public class CoffeeTableBlock extends Block implements EntityBlock {

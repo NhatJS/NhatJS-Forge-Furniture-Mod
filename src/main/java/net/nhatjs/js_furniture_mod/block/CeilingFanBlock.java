@@ -3,7 +3,6 @@ package net.nhatjs.js_furniture_mod.block;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
@@ -21,7 +20,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.nhatjs.js_furniture_mod.block.blockentity.client.CeilingFanBlockEntity;
+import net.nhatjs.js_furniture_mod.blockentity.client.CeilingFanBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
 public class CeilingFanBlock extends Block implements EntityBlock {
