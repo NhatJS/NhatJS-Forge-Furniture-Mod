@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:black_concrete"
+    },
+    "2": {
+      "item": "minecraft:iron_ingot"
+    },
+    "3": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "211",
+    "333"
+  ],
+  "result": {
+    "count": 2,
+    "item": "js_furniture_mod:ram"
+  },
+  "show_notification": true
+}

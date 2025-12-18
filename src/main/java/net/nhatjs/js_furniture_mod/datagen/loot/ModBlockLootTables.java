@@ -118,6 +118,21 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.WOOD_MEDIUM_KITCHEN_CABINET_TOP.get());
         this.dropSelf(ModBlocks.WOOD_MEDIUM_KITCHEN_CABINET_TOP_B.get());
         //end
+
+        //1.0.5 update
+        this.dropSelf(ModBlocks.COMPUTER_CASE.get());
+        this.dropSelf(ModBlocks.PC_ADDED_1.get());
+        this.dropSelf(ModBlocks.PC_ADDED_2.get());
+        this.dropSelf(ModBlocks.PC_ADDED_3.get());
+        this.dropSelf(ModBlocks.PC_ADDED_4.get());
+        this.dropSelf(ModBlocks.PC_ADDED_5.get());
+        this.dropSelf(ModBlocks.PC_ADDED_6.get());
+        this.dropSelf(ModBlocks.PC_ADDED_7.get());
+        this.dropSelf(ModBlocks.PC_ADDED_8.get());
+        this.dropSelf(ModBlocks.PC_ADDED_9.get());
+        this.dropSelf(ModBlocks.PC_ADDED_10.get());
+        this.dropSelf(ModBlocks.PC_ADDED_11.get());
+        //end
     }
 
     @Override

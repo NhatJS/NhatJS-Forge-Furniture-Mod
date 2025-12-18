@@ -7,6 +7,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.nhatjs.js_furniture_mod.datagen.ModBlockStateProvider;
+import net.nhatjs.js_furniture_mod.datagen.ModItemModelProvider;
 import net.nhatjs.js_furniture_mod.datagen.ModLootTableProvider;
 import net.nhatjs.js_furniture_mod.datagen.ModRecipeProvider;
 
@@ -23,6 +25,9 @@ public class NhatJSFurnitureModDataGenerators {
 
         generator.addProvider(event.includeServer(), ModLootTableProvider.create(packOutput));
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput));
+
+        generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
 
     }
 }
