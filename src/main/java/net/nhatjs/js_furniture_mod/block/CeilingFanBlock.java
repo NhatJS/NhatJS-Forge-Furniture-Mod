@@ -8,21 +8,14 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.nhatjs.js_furniture_mod.blockentity.client.CeilingFanBlockEntity;
-import org.jetbrains.annotations.Nullable;
 
-public class CeilingFanBlock extends Block implements EntityBlock {
+public class CeilingFanBlock extends Block {
     public static final BooleanProperty TURN_ON = BooleanProperty.create("turn_on");
 
     private final DyeColor color;
@@ -45,12 +38,6 @@ public class CeilingFanBlock extends Block implements EntityBlock {
     }
 
     @Override
-    @Nullable
-    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new CeilingFanBlockEntity(pos, state);
-    }
-
-    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(TURN_ON);
     }
@@ -61,18 +48,5 @@ public class CeilingFanBlock extends Block implements EntityBlock {
             level.setBlock(pos, state.cycle(TURN_ON), Block.UPDATE_ALL);
         }
         return InteractionResult.SUCCESS;
-    }
-
-    @Override
-    public RenderShape getRenderShape(BlockState state) {
-        return RenderShape.MODEL;
-    }
-
-    @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state,
-                                                                  BlockEntityType<T> type) {
-        return level.isClientSide()
-                ? (w, p, s, be) -> ((CeilingFanBlockEntity) be).tick()
-                : null;
     }
 }

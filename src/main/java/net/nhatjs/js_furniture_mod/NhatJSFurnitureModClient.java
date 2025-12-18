@@ -8,7 +8,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.nhatjs.js_furniture_mod.block.ModBlocks;
 import net.nhatjs.js_furniture_mod.blockentity.ModBlockEntities;
-import net.nhatjs.js_furniture_mod.blockentity.renderer.CeilingFanRenderer;
 import net.nhatjs.js_furniture_mod.blockentity.renderer.CoffeeTableRenderer;
 
 public class NhatJSFurnitureModClient {
@@ -93,7 +92,6 @@ public class NhatJSFurnitureModClient {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CEILING_FAN.get(), RenderType.cutoutMipped());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLACK_GAMING_CHAIR.get(), RenderType.cutoutMipped());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WHITE_GAMING_CHAIR.get(), RenderType.cutoutMipped());
-            BlockEntityRenderers.register(ModBlockEntities.CEILING_FAN.get(), CeilingFanRenderer::new);
             BlockEntityRenderers.register(ModBlockEntities.COFFEE_TABLE.get(), CoffeeTableRenderer::new);
             //end
 
