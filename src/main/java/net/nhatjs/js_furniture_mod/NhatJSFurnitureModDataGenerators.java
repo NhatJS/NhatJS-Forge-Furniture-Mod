@@ -10,6 +10,8 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.nhatjs.js_furniture_mod.datagen.ModBlockLootTableProvider;
+import net.nhatjs.js_furniture_mod.datagen.ModBlockStateProvider;
+import net.nhatjs.js_furniture_mod.datagen.ModItemModelProvider;
 import net.nhatjs.js_furniture_mod.datagen.ModRecipeProvider;
 
 import java.util.Collections;
@@ -29,6 +31,9 @@ public class NhatJSFurnitureModDataGenerators {
                 List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)),
                 lookupProvider));
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
+
+        generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
 
     }
 }
