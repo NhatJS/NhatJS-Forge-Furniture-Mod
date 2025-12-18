@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-18T10:55:06.6066321	Recipes
+// 1.20.1	2025-12-18T19:50:12.5059792	Recipes
 3bdf8ea383a88255ff3bf6313dd903a89c9f05f7 data/js_furniture_mod/advancements/recipes/decorations/aio_cooler.json
 07f9ab2296b2cd99fd40fdffdb51754ee7d683ba data/js_furniture_mod/advancements/recipes/decorations/black_gaming_chair.json
 f352aba31a924633235fb32d408e9cd731cc0c2d data/js_furniture_mod/advancements/recipes/decorations/black_mirror.json
@@ -47,7 +47,6 @@ b14318195ffdeafc1ab73fba2050e2ccfc95b966 data/js_furniture_mod/advancements/reci
 4b7f11b24ab92691050289e6d9ea1a0e937d6fc0 data/js_furniture_mod/advancements/recipes/decorations/modern_light.json
 4c872765296b0f205dc81a040e6e7156cdcb3029 data/js_furniture_mod/advancements/recipes/decorations/monitor.json
 150a9d063b2c60950a2984fb8f0b6fce3381a18d data/js_furniture_mod/advancements/recipes/decorations/monitor_setup.json
-bf49af850632ba786eff2ba4437e4b1e21a7497b data/js_furniture_mod/advancements/recipes/decorations/pc.json
 942ac2ef841582d68389e69fe3215dd6a4133392 data/js_furniture_mod/advancements/recipes/decorations/pc_tower_glass.json
 2a04670676f76a560484fbe5ed2c2668c2bdb0cb data/js_furniture_mod/advancements/recipes/decorations/plant_pot.json
 40cc714f8fc3ec97117ff2a3ca4e15160546dce4 data/js_furniture_mod/advancements/recipes/decorations/portable_laptop_stand.json
@@ -147,7 +146,6 @@ fda0264e734164136676ab6cdd02d982ebd6d6e6 data/js_furniture_mod/recipes/modern_ch
 3c37e738a9b77a119b409e94e0a1f1aaccd2aed3 data/js_furniture_mod/recipes/modern_light.json
 c2722875f450a2d6c91e3198ba95616fc81436f4 data/js_furniture_mod/recipes/monitor.json
 22fb64b050b0d065f3d270cc47e813f6e751980b data/js_furniture_mod/recipes/monitor_setup.json
-cb2553707ee692b7c3f8e870a9179c52a8132063 data/js_furniture_mod/recipes/pc.json
 2de09abc85cb7818d7f776a6759780ac42cdcdf0 data/js_furniture_mod/recipes/pc_tower_glass.json
 8fbb46a0d4e0e65ad3de961ad50c452697b1b8c2 data/js_furniture_mod/recipes/plant_pot.json
 8e99c4cf89db8cc4682d4d9d1dd073d6fe5814f2 data/js_furniture_mod/recipes/portable_laptop_stand.json
